@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "m.media-amazon.com" },
       { protocol: "https", hostname: "placehold.co" },
-      { protocol: "http", hostname: "ik.imagekit.io", port: "" },
+      { protocol: "https", hostname: "ik.imagekit.io", port: "" },
     ],
   },
 };
