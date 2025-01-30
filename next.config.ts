@@ -15,6 +15,14 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "ik.imagekit.io", port: "" },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/api/:path*",
+        destination: `${process.env.NEXT_PUBLIC_API_ENDPOINT}/:path*`,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
