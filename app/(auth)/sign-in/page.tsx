@@ -6,7 +6,7 @@ import { signInSchema } from "@/lib/validation";
 const page = () => (
   <AuthForm
     defaultValues={{
-      email: "ahmedelsayedsaed@gmail.com",
+      email: "ahmedelsayed@gmail.com",
       password: "123456789",
     }}
     schema={signInSchema}

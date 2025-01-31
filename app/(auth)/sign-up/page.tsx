@@ -12,7 +12,7 @@ const page = () => (
       email: "ahmedelsayed@gmail.com",
       password: "123456789",
       fullName: "Ahmed elsayed",
-      universityCard: "test-upload_x3pB37IVZ.png",
+      universityCard: "",
       universityId: 123,
     }}
     onSubmit={signUp}

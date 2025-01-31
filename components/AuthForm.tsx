@@ -22,10 +22,10 @@ import { Input } from "./ui/input";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { FIELD_NAMES, FIELD_TYPES } from "@/constants";
-import ImageUpload from "./ImageUpload";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import { Loader, Loader2 } from "lucide-react";
+import FileUpload from "./FileUpload";
 interface Props<T extends FieldValues> {
   schema: ZodType<T>;
   defaultValues: T;
@@ -92,7 +92,14 @@ const AuthForm = <T extends FieldValues>({
                   </FormLabel>
                   <FormControl>
                     {field.name === "universityCard" ? (
-                      <ImageUpload onChange={field.onChange} />
+                      <FileUpload
+                        variant="dark"
+                        placeholder="Upload your  ID"
+                        type="image"
+                        accept="image/*"
+                        floder="ids"
+                        onFileChange={field.onChange}
+                      />
                     ) : (
                       <Input
                         required

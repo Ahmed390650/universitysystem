@@ -22,7 +22,6 @@ export const signInWithCredentails = async (
       password,
       redirect: false,
     });
-    console.log({ result });
     if (result?.error) {
       return {
         success: false,
@@ -65,13 +64,15 @@ export const signUp = async (params: AuthCredentials) => {
       universityId,
       universityCard,
     });
+
     await workflowClient.trigger({
-      url: `${config.env.prodApiEndpoint}/api/workflows/route.ts`,
+      url: `${config.env.prodApiEndpoint}/api/workflows/onboarding`,
       body: {
         email,
         fullName,
       },
     });
+
     await signInWithCredentails({ email, password });
 
     return {

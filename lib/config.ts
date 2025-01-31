@@ -12,7 +12,7 @@ const config = {
       redisUrl: process.env.UPSTACH_REDIS_URL!,
       redisToken: process.env.UPSTACH_REDIS_TOKEN!,
       qstashUrl: process.env.QSTASH_URL!,
-      qstachToken: process.env.QSTASH_TOKEN!,
+      qstachToken: process.env.NEXT_PUBLIC_QSTASH_TOKEN!,
       resendToken: process.env.RESEND_TOKEN!,
     },
   },

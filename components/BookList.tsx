@@ -1,5 +1,4 @@
 import React from "react";
-import BookOverView from "./BookOverView";
 import BookCard from "./BookCard";
 interface Props {
   title: string;
@@ -7,6 +6,7 @@ interface Props {
   containerClassName?: string;
 }
 const BookList = ({ books, containerClassName, title }: Props) => {
+  if (books.length < 2) return null;
   return (
     <section className={containerClassName}>
       <h2 className="font-bebas-neue text-4xl text-light-100">{title}</h2>
