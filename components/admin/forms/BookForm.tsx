@@ -49,7 +49,7 @@ const BookForm = ({ type, ...book }: Props) => {
         title: "Book created successfully",
         description: result.message,
       });
-      router.push(`/admin/books/${result.data.id}`);
+      router.push(`/book/${result.data.id}`);
     } else {
       toast({
         title: "Failed to create book",
